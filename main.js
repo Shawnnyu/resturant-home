@@ -1,0 +1,1 @@
+(()=>{"use strict";document.body.appendChild(function(){const e=document.createElement("header"),d=document.createElement("h1"),n=document.createTextNode("RESTURANT PLACEHOLDER");return d.appendChild(n),e.appendChild(d),console.log("done adding header"),e}())})();
