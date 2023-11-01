@@ -1,0 +1,11 @@
+<about>
+    <address>
+        <line1>427 Canal Court Dawsonville</line1>
+        <line2>GA 30534</line2>
+    </address>
+    <schedule>
+        <weekdays>11am - 2am</weekdays> 
+        <weekends>11am - 4am</weekends>
+        <happyhour>4pm - 7pm</happyhour>
+    </schedule>
+</about>

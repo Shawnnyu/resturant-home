@@ -1,3 +1,6 @@
-import { addHeader } from "./page-load";
+import { loadFooter, loadHeader } from "./page-load";
+import { loadHomeContent } from "./home-load";
 
-document.body.appendChild(addHeader());
+document.body.insertBefore(loadHeader(), document.body.firstChild);
+document.body.appendChild(loadFooter());
+loadHomeContent();

@@ -1,19 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
 
-header {
-  height: 200px;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: white;
+:root {
+  --heading-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  --nav-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px white, 0 0 60px white, 0 0 10px #ff8d00, 0 0 98px white;
 }
 
 body {
-  background: url("images/background.jpg");
+  background-image: url("images/background.jpg");
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  gap: 100px;
+}
+
+header {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+}
+
+header h1 {
+  font-size: 8rem;
+  word-spacing: 50px;
+  white-space: nowrap;
+}
+
+header h1:hover {
+  animation: blink 0.1s;
+}
+
+header h1,
+.nav-btn {
+  font-family: "Sacramento", cursive;
+  text-shadow: var(--heading-shadow);
+  color: #fff6a9;
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  gap: 80px;
+}
+
+.nav-btn {
+  font-size: 3rem;
+  background: none;
+  border: none;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+  color: white;
+  text-shadow: var(--nav-shadow);
+}
+
+.nav-btn:active,
+.active {
+  font-weight: 900;
+  color: white;
+}
+
+.content {
+  display: flex;
+  min-width: 975px;
+  width: 50%;
+  min-height: 700px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.homepage-img {
+  height: 700px;
+}
+
+.intro-container,
+.contact-container,
+.menu-container {
+  font-family: "Sacramento";
+  display: flex;
+  flex-direction: column;
+  white-space: pre-wrap;
+  flex: 1;
+}
+
+.intro-container,
+.contact-container {
+  align-items: center;
+  justify-content: center;
+  font-size: max(2.5rem, 1.8vw);
+}
+
+.intro-home,
+.intro-contact {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 100px;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.menu-container {
+  font-family: "Roboto";
+  align-items: start;
+  padding: 16px;
+  gap: 48px;
+}
+
+.menu-item {
+  width: 100%;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-item .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer p {
+  font-family: "Sacramento", cursive;
+  color: white;
+  font-size: max(0.8rem, 0.8vw);
+}
+
+@keyframes blink {
+  0% {
+    color: #111;
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: var(--heading-shadow);
+    color: #fff6a9;
+  }
+  100% {
+    color: #111;
+    text-shadow: none;
+  }
 }
